@@ -1,5 +1,11 @@
+/* Origin Styles */
+
 * {
     font-family: Helvetica, Arial, sans-serif;
+}
+
+p {
+    font-size: 16px;
 }
 
 h1 {
@@ -8,8 +14,39 @@ h1 {
     color: khaki;
 }
 
+h2 {
+    font-size: 32px;
+    font-weight: bold;
+    color: white;
+}
+
+h3 {
+    font-size: 18px;
+}
+
+/* Class Styles  */
 
 .header-logo {
     background-image: url(assets/pattern.webp);
-    
+}
+
+h1.header-logo {
+    text-align: center;
+}
+
+.section-heading.brushes {
+    background-color: mediumspringgreen;
+}
+
+.section-heading.frames {
+    background-color: lightcoral;
+}
+
+.section-heading.paint {
+    background-color: skyblue;
+}
+
+.highlight {
+    color: blue;
+    font-weight: bold;
 }
