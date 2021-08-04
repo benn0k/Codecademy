@@ -1,4 +1,4 @@
-//Create function by calling function, lablaing it, writing code
+//Create function by calling function, labelling it, writing code
 function sayThanks(name) {
     console.log('Thank you for your purchase ' + name + '! We appreciate your business.');
 }
@@ -21,7 +21,6 @@ function monitorCount(rows, columns) {
     //below returns the value out of the function
     return rows * columns;
 }
-
 const numOfMonitors = monitorCount(5, 4);
 //you can call functions inside of functions
 function costOfMonitors(rows, columns) {
@@ -55,4 +54,6 @@ const plantNeedsWater = (day) => {
   
   //we can rewrite the above as such
 
-  const plantNeedsWater = day => day === 'Wednesday' ? true : false;
+  const plantNeedsWater = day => day === 'wednesday' ? true : false;
+
+ console.log( plantNeedsWater(wednesday));
