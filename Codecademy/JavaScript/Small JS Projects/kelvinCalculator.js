@@ -7,3 +7,5 @@ let fahrenheit = Math.floor(celsius * (9/5) + 32);
 let newton = Math.floor(celsius * (33/100));
 
 console.log(`The temprature is ${fahrenheit} degrees Fahrenheit.`);
+
+console.log('hello world');

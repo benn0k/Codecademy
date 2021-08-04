@@ -1,3 +1,18 @@
+let season = 'summer';
+
+if (season === 'spring') {
+    console.log('It\'s spring! The trees are budding!');
+} else if (season === 'winter') {
+    console.log('It\'s winter! Everything is covered in snow.');
+} else if (season === 'fall') {
+    console.log('It\'s fall! Leaves are falling!');
+} else if (season === 'summer') {
+    console.log('It\'s sunny and warm because it\'s summer!');
+} else {
+    console.log('Invalid season.');
+}
+
+
 //HEADER 
 let gainedDoller = true;
 let favoriteAnimal = 'dog';
@@ -169,9 +184,9 @@ switch (randomNumber) {
 
 let raceNumber = Math.floor(Math.random() * 1000);
 var regesteredEarly = false;
-let runnerAge = 27;
+let runnerAge= 27;
 
-if (runnerAge > 18 && regesteredEarly === true) {
+if (runnerAge > 18 && regesteredEarly === true){
   raceNumber += 1000;
 }
 
@@ -179,31 +194,60 @@ if (runnerAge > 18 && regesteredEarly === true) {
   console.log(`Your race is at 9:30AM and you racer number is ${raceNumber}.`);
 } else if (runnerAge > 18 && regesteredEarly === false) {
   console.log(`Late adults run at 11:00AM. Your racer number is ${raceNumber}.`);
-} else if (runnerAge < 18) {
+} else if (runnerAge < 18){
   console.log(`Youth registrants run at 12:30 PM. Your racer number is ${raceNumber}.`);
-} else if (runnerAge === 18) {
+} else if (runnerAge === 18){
   console.log(`Please see the regestration desk `);
 }
 
 console.log(raceNumber);
 
+// Arrays 
+const hobbies = ['String 1', 'String 2', 'String 3'];
+console.log(hobbies); // prints the entire array
+
+//call single element in array
+const famousSayings = ['Fortune favors the brave.', 'A joke is a very serious thing.', 'Where there is love there is life.'];
+let listItem = console.log(famousSayings[1]);
+
+//replace single array element with element
+let groceryList = ['bread', 'tomatoes', 'milk'];
+groceryList[1] = 'avocados';
+
+//reassign arrays 
+let condiments = ['Ketchup', 'Mustard', 'Soy Sauce', 'Sriracha'];
+const utensils = ['Fork', 'Knife', 'Chopsticks', 'Spork'];
+
+condiments[0] = 'Mayo';
+console.log(condiments);
+
+condiments = ['Mayo'];
+console.log(condiments)
+
+utensils[3] = 'Spoon'
+console.log(utensils)
+
+//.length to call the number of objects in an array
+const objectives = ['Learn a new languages', 'Read 52 books', 'Run a marathon'];
+console.log(objectives.length);
+//push adds elements to the front of the array
+const chores = ['wash dishes', 'do laundry', 'take out trash'];
+chores.push('element one', 'element 2');
+
+const chores = ['wash dishes', 'do laundry', 'take out trash', 'cook dinner', 'mop floor'];
+chores.pop;
 
 
-let athleteFinalPosition = 'first place';
 
 
-switch (athleteFinalPosition) { 
-  case 'first place':
-    console.log('You get the gold medal!');
-    break;
-  case 'second place':
-    console.log('You get the silver medal!');
-    break;
-  case 'third place':
-    console.log('You get the bronze medal!');
-    break;
-    default:
-    console.log('No medal awarded.');
-    break;
 
-}
+const groceryList = ['orange juice', 'bananas', 'coffee beans', 'brown rice', 'pasta', 'coconut oil', 'plantains'];
+
+groceryList.shift();
+groceryList.unshift('popcorn');
+
+
+console.log(groceryList.slice(1,4));
+console.log(groceryList);
+
+const pastaIndex = groceryList.indexOf('pasta')
