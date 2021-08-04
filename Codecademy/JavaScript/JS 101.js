@@ -1,12 +1,13 @@
-// Intro//
-//Common functions
-console.log() //logs to console
-//Methods//
-//Used to shorthand code, common uses include://
-console.log('Codecademy'.toUpperCase());
-//this will log the string but uppercased to console//
-let myName = 'Ryan';
+let season = 'summer';
 
-if (myName === 'Ryan'){
-
+if (season === 'spring') {
+    console.log('It\'s spring! The trees are budding!');
+} else if (season === 'winter') {
+    console.log('It\'s winter! Everything is covered in snow.');
+} else if (season === 'fall') {
+    console.log('It\'s fall! Leaves are falling!');
+} else if (season === 'summer') {
+    console.log('It\'s sunny and warm because it\'s summer!');
+} else {
+    console.log('Invalid season.');
 }
