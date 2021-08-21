@@ -192,7 +192,7 @@ console.log(raceNumber);
 let athleteFinalPosition = 'first place';
 
 
-switch (athleteFinalPosition) { 
+switch (athleteFinalPosition) {
   case 'first place':
     console.log('You get the gold medal!');
     break;
@@ -202,8 +202,49 @@ switch (athleteFinalPosition) {
   case 'third place':
     console.log('You get the bronze medal!');
     break;
-    default:
+  default:
     console.log('No medal awarded.');
     break;
 
 }
+
+
+//Blocks and scope 
+
+const city = 'New York City';
+
+function logCitySkyline() {
+  let skyscraper = 'Empire State Building';
+  return 'The stars over the ' + skyscraper + ' in ' + city;
+}
+
+console.log(logCitySkyline());
+
+
+var satellite = 'The Moon';
+var galaxy = 'The Milky Way';
+var stars = 'North Star';
+
+const callMyNightSky = () => {
+  stars = 'Sirius';
+  return 'Night Sky: ' + satellite + ', ' + stars + ', and ' + galaxy;
+
+}
+
+console.log(callMyNightSky());
+console.log(stars);
+
+
+
+const logVisibleLightWaves = () => {
+  let lightWaves = 'Moonlight';
+  let region = 'The Arctic';
+  if (region === 'The Arctic') {
+    let lightWaves = 'Northern Lights';
+    console.log(lightWaves);
+  }
+
+  console.log(lightWaves);
+};
+
+logVisibleLightWaves();
