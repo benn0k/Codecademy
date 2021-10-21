@@ -291,3 +291,176 @@ const name2 = "Warren";
 
 logEvent(event2, name2);
 logTime(days2, name2);
+
+// Arrays and functions
+
+//Arrays time! time!!!
+//declared as a normal variable, elements are nested between commas
+let newYearsResolutions = [
+  "Keep a journal",
+  "Take a falconry class",
+  "Learn to juggle",
+];
+//can be called
+
+console.log(newYearsResolutions);
+
+const concept = ["Toots", "can", "be", "farted"];
+
+function changeArr(arr) {
+  arr[3] = "FARTED";
+}
+
+changeArr(concept);
+
+const famousSayings = [
+  "Fortune favors the brave.",
+  "A joke is a very serious thing.",
+  "Where there is love there is life.",
+];
+
+let listItem = famousSayings([1]);
+console.log(listItem);
+
+console.log(famousSayings[2]);
+
+//both let and const allow us to change elements inside of arrays. const just doesn't allow us to
+//reassign the variable to something else
+
+let condiments = ["Ketchup", "Mustard", "Soy Sauce", "Sriracha"];
+const utensils = ["Fork", "Knife", "Chopsticks", "Spork"];
+//replace condiments 0 with "Mayo"
+condiments[0] = "Mayo";
+console.log(condiments);
+//replace condiments array with just "Mayo"
+condiments = ["Mayo"];
+//replace utensils 3 with Spoon
+utensils[3] = "Spoon";
+console.log(utensils);
+
+//.length property -- appended to array, returns number of elements in array
+const objectives = ["Learn a new languages", "Read 52 books", "Run a marathon"];
+console.log(objectives.length);
+//prints 2
+
+//.push -- adds item to end of array
+const chores = ["wash dishes", "do laundry", "take out trash"];
+
+chores.push("Wash Dishes", "Water Plants");
+
+console.log(chores);
+//prints the 5 strings we have assigned to chores with "Wash dishes" and "Water Plants " aty the end
+
+//.pop -- removes last item in array
+const chores = [
+  "wash dishes",
+  "do laundry",
+  "take out trash",
+  "cook dinner",
+  "mop floor",
+];
+
+chores.pop();
+
+//removes mop floor
+
+console.log(chores);
+
+const groceryList = [
+  "orange juice",
+  "bananas",
+  "coffee beans",
+  "brown rice",
+  "pasta",
+  "coconut oil",
+  "plantains",
+];
+//.shift removes first item from
+groceryList.shift();
+//.unshift adds to beginning of array
+groceryList.unshift("popcorn");
+console.log(groceryList);
+
+console.log(groceryList.slice(1, 4));
+console.log(groceryList);
+//returns bananas -> pasta
+
+//define pastaIndex, set to grocerylist.indexOf -> .indexOf(); will return the index location of a string
+const pastaIndex = groceryList.indexOf("pasta");
+console.log(pastaIndex);
+//returns 4
+
+const concept = ["arrays", "can", "be", "mutated"];
+
+function changeArr(arr) {
+  arr[3] = "MUTATED";
+}
+
+changeArr(concept);
+
+console.log(concept);
+//MUTATED expected in [3]
+
+function removeElement(newArr) {
+  newArr.pop();
+}
+removeElement(concept);
+console.log(concept);
+//MUTATED removed - expected 3 array elements
+
+let numberClusters = [
+  [1, 2],
+  [3, 4],
+  [5, 6],
+];
+
+const target = numberClusters[2][1];
+
+//LOOPS
+
+let vacationSpots = ["Ireland", "Japan", "Canada"];
+
+// log all three elements separately
+
+console.log(vacationSpots[0]);
+console.log(vacationSpots[1]);
+console.log(vacationSpots[2]);
+
+//the above above code can be written as
+
+//declare counter, set to five. when counter is less than 11, add 1 to counter and log counter to console.log();
+for (let counter = 5; counter < 11; counter++) {
+  console.log(counter);
+}
+
+for (let counter = 0; counter < 4; counter++) {
+  console.log(counter);
+}
+
+//edit the above loop so that it's in reverse below
+
+for (let counter = 3; counter >= 0; counter--) {
+  console.log(counter);
+}
+
+const vacationSpots = ["Bali", "Paris", "Tulum"];
+
+// Write your code below -> Write a for loop that iterates through all items in the array
+
+for (let i = 0; i < vacationSpots.length; i++) {
+  console.log("I would love to visit " + vacationSpots[i]);
+}
+
+let bobsFollowers = ["Ryan", "Brady", "Jon", "Thomas"];
+let tinasFollowers = ["Tamie", "Brady", "Thomas"];
+let mutualFollowers = [];
+
+for (let i = 0; i < bobsFollowers.length; i++) {
+  for (let j = 0; j < tinasFollowers.length; j++) {
+    if (bobsFollowers[i] === tinasFollowers[j]) {
+      mutualFollowers.push(tinasFollowers[j]);
+    }
+  }
+}
+
+console.log(mutualFollowers);
