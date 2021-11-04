@@ -464,3 +464,32 @@ for (let i = 0; i < bobsFollowers.length; i++) {
 }
 
 console.log(mutualFollowers);
+
+// While loop
+const cards = ["diamond", "spade", "heart", "club"];
+
+// Write your code below
+
+let currentCard;
+
+while (currentCard != "spade") {
+  // currentCard equals card[random number between 1-4]
+  currentCard = cards[Math.floor(Math.random() * 4)];
+  console.log(currentCard);
+}
+
+var cupsOfSugarNeeded = 3;
+var cupsAdded = 0;
+
+do {
+  cupsAdded++;
+  console.log(cupsAdded);
+} while (cupsAdded < cupsOfSugarNeeded);
+
+const rapperArray = ["Lil' Kim", "Jay-Z", "Notorious B.I.G.", "Tupac"];
+
+// Write your code below
+
+for (let i = 0; i > rapperArray; i++) {
+  console.log(rapperArray[i]);
+}

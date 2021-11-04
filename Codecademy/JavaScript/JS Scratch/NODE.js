@@ -1,35 +1,18 @@
-let bobsFollowers = ["Ryan", "Brady", "Jon", "Thomas"];
-let tinasFollowers = ["Tamie", "Brady", "Thomas"];
-let mutualFollowers = [];
+//declare what you want to translate
+let input = "I'm stinky!";
+//declare a "vowels" array where we'll put our vowels
+const vowels = ["a", "e", "i", "o", "u"];
+//create resultArray to store vowels from input
+let resultArray = [];
 
-/*
-for (let i = 0; i < bobsFollowers.length; i++) {
-  for (let j = 0; j < tinasFollowers.length; j++) {
-    if (bobsFollowers[i] === tinasFollowers[j]) {
-      mutualFollowers.push(tinasFollowers[j]);
+for (let i = 0; i < input.length; i++) {
+  //debug console.log(i);
+  for (let e = 0; e < vowels.length; e++) {
+    //debug console.log(e);
+    if (input[i] === vowels[e]) {
+      resultArray.push(vowels[e]);
     }
   }
-} 
-
-//Will iterate through all of Bob's followers until end
-for (let i = 0; i < bobsFollowers.length; i++) {
-// If bobs followers i does not return -1 (does not exist)
-  if (tinasFollowers.indexOf(bobsFollowers[i]) != -1) {
-      //push bobs followers i to mutual followers 
-    mutualFollowers.push(bobsFollowers[i]);
-  }
-
 }
 
-*/
-
-//iterate through all of bob's followers until end
-for (let i = 0; i < bobsFollowers.length; i++) {
-  //if tinasfollowers includes (bobsFollowers[i])
-  if (tinasFollowers.includes(bobsFollowers[i])) {
-    //push bobsFollowers to mutualFollowers
-    mutualFollowers.push(bobsFollowers[i]);
-  }
-}
-
-console.log(mutualFollowers);
+console.log(resultArray);
