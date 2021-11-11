@@ -1,4 +1,4 @@
-//!Objects
+//!Objects!
 // !An object literal with two key-value pairs
 let spaceship = { "Fuel Type": "diesel", color: "silver" };
 
@@ -19,7 +19,6 @@ spaceship.color; // Returns 'silver',
 spaceship.favoriteIcecream; // Returns undefined
 
 //*--> Example
-
 let spaceship = {
   homePlanet: "Earth",
   color: "silver",
@@ -60,7 +59,6 @@ let returnAnyProp = (objectName, propName) => objectName[propName];
 returnAnyProp(spaceship, "homePlanet"); // Returns 'Earth'
 
 //*---> Example
-
 let spaceship = {
   "Fuel Type": "Turbo Fuel",
   "Active Mission": true,
@@ -84,3 +82,27 @@ let returnAnyProp = (objectName, propName) => objectName[propName];
 console.log(returnAnyProp(spaceship, "Active Mission")); //true expected
 
 //! Property Assignment
+
+const spaceship = { type: "shuttle" };
+
+spaceship = { type: "alien" }; // TypeError: Assignment to constant variable.
+spaceship.type = "alien"; // Changes the value of the type property
+spaceship.speed = "Mach 5"; // Creates a new key of 'speed' with a value of 'Mach 5'
+
+const spaceship = {
+  "Fuel Type": "Turbo Fuel",
+  homePlanet: "Earth",
+  mission: "Explore the universe",
+};
+
+delete spaceship.mission; // Removes the mission property
+
+//*----> Example
+let spaceship = {
+  "Fuel Type": "Turbo Fuel",
+  homePlanet: "Earth",
+  color: "silver",
+  "Secret Mission": "Discover life outside of Earth.",
+};
+
+// Write your code below
