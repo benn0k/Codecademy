@@ -16,3 +16,7 @@ console.log(spaceshipColor); //glorious gold expected
 
 let spaceshipEngines = (spaceship.numEngines = 3);
 console.log(spaceshipEngines); //3 expected
+
+//?use delete to remove 'Secret Mission" from spaceship object
+
+delete spaceship["Secret Mission"];
