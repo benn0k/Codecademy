@@ -1,5 +1,5 @@
 //declare what you want to translate
-let input = "I'm stinky!".toLowerCase();
+let input = "turpentine and turtles".toLowerCase();
 //declare a "vowels" array where we'll put our vowels
 const vowels = ["a", "e", "i", "o", "u"];
 //create resultArray to store vowels from input
@@ -17,6 +17,13 @@ for (let i = 0; i < input.length; i++) {
       resultArray.push(vowels[e]);
     }
   }
+
+  // loop that checks if "e" is input, doubles letter
+  if (input[i] === "e") {
+    resultArray.push("e");
+  } else if (input[i] === "u") {
+    resultArray.push("u");
+  }
 }
-//log that shit, i, i expected
-console.log(resultArray);
+//log that shit
+console.log(resultArray.join("").toUpperCase());
