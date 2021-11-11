@@ -1,18 +1,22 @@
-let spaceship = {
-  passengers: null,
+//! Nested Objects
+
+//? Objects can contain other objects
+const spaceship = {
+  //telescope of spaceship
   telescope: {
+    //data of telescope of spaceship
     yearBuilt: 2018,
     model: "91031-XLT",
     focalLength: 2032,
   },
   crew: {
+    //spacesip crew captian sandra, who has a degree in computer engineering
     captain: {
       name: "Sandra",
       degree: "Computer Engineering",
       encourageTeam() {
         console.log("We got this!");
       },
-      favorite_foods: ["cookies", "cakes", "candy", "spinach"],
     },
   },
   engine: {
@@ -29,8 +33,6 @@ let spaceship = {
     },
   },
 };
-
-//? Create a variable capFave and assign the captain‘s favorite food
-
-let capFave = spaceship.crew.captain.favorite_foods[0];
-console.log(capFave);
+spaceship.nanoelectronics["back-up"].battery; // Returns 'Lithium'
+spaceship.crew.captain.encourageTeam(); // "We got this!" expected
+//*Example--->
