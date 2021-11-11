@@ -1,21 +1,18 @@
 let spaceship = {
   "Fuel Type": "Turbo Fuel",
-  "Active Mission": true,
   homePlanet: "Earth",
-  numCrew: 5,
+  color: "silver",
+  "Secret Mission": "Discover life outside of Earth.",
 };
-
-let propName = "Active Mission";
 
 // Write your code below
 
-var isActive = spaceship["Active Mission"];
+//?create var assigned to => change color in spaceship object to "glorious gold"
 
-// debug;
-// console.log(isActive); //true expected
+let spaceshipColor = (spaceship.color = "glorious gold");
+console.log(spaceshipColor); //glorious gold expected
 
-//access via arrow function
+//? add numEngines property with value = 5 to spaceship object
 
-let returnAnyProp = (objectName, propName) => objectName[propName];
-//object  //property
-console.log(returnAnyProp(spaceship, "Active Mission")); //true expected
+let spaceshipEngines = (spaceship.numEngines = 3);
+console.log(spaceshipEngines); //3 expected
