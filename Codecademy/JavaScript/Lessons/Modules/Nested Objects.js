@@ -83,3 +83,19 @@ spaceship.passengers = { names: ["Ryan", "Brady", "Jon"] };
 
 let firstPassenger = spaceship.passengers.names[0];
 console.log(firstPassenger);
+
+//* Pass By Reference
+
+//?Objects are passed by reference. This means when we pass a variable assigned to an object into a function as an argument, the computer interprets the parameter name as pointing to the space in memory holding that object.
+//? Basically this just means that we can mutate objects even if they're assigned a const var
+
+//*---> Example
+
+let spaceship = {
+  "Fuel Type": "Turbo Fuel",
+  homePlanet: "Earth",
+};
+
+// Write your code below
+
+//?Write a function greenEnergy() that has an object as a parameter and sets that object’s 'Fuel Type' property to 'avocado oil'.
