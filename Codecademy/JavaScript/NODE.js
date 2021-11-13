@@ -12,7 +12,7 @@ let spaceship = {
       encourageTeam() {
         console.log("We got this!");
       },
-      favorite_foods: ["cookies", "cakes", "candy", "spinach"],
+      "Favorite Foods": ["cookies", "cakes", "candy", "spinach"],
     },
   },
   engine: {
@@ -32,5 +32,16 @@ let spaceship = {
 
 //? Create a variable capFave and assign the captain‘s favorite food
 
-let capFave = spaceship.crew.captain.favorite_foods[0];
-console.log(capFave);
+let capFave = spaceship.crew.captain["Favorite Foods"][0];
+//console.log(capFave);
+
+//? Right now the passengers property has a value of null. Instead, assign as its value an array of objects.
+
+//this will nest an object in Passengers known as "names" with the array
+spaceship.passengers = { names: ["Ryan", "Brady", "Jon"] };
+
+//console.log(passengers);
+//?Create a variable firstPassenger and assign the first passenger as its value (the element in the 0th index of the spaceship.passengers array you just made).
+
+let firstPassenger = spaceship.passengers.names[0];
+console.log(firstPassenger);
