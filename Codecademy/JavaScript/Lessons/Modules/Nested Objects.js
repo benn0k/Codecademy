@@ -99,3 +99,4 @@ let spaceship = {
 // Write your code below
 
 //?Write a function greenEnergy() that has an object as a parameter and sets that object’s 'Fuel Type' property to 'avocado oil'.
+//hella pooppy
