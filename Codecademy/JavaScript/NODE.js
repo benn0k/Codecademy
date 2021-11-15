@@ -1,12 +1,22 @@
-//?In main.js there is an object robot, add a property of model and assign to it a value of '1E78V2'. Add another property, energyLevel and assign to it a value of 100.
-
+//?Currently the .checkEnergy() method is not producing the correct output because it is using arrow function syntax.
+//?Refactor, or change, the method to use a function expression
+/*
 const robot = {
-  model: `1E78V2`,
   energyLevel: 100,
-  provideInfo() {
-    //scoped local
-    return `I am ${this.model} and my current energy level is ${this.energyLevel}`;
+  checkEnergy: () => {
+    console.log(`Energy is currently at ${this.energyLevel}%.`);
   },
 };
 
-console.log(robot.provideInfo());
+robot.checkEnergy();
+*/
+//!Change
+
+const robot = {
+  energyLevel: 100,
+  checkEnergy() {
+    console.log(`Energy is currently at ${this.energyLevel}%.`);
+  },
+};
+
+robot.checkEnergy();

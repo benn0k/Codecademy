@@ -166,3 +166,43 @@ for (let crewMember in spaceship.crew) {
   );
 }
 //Name: Degree Expected
+
+//* Arrow Function and this
+
+const goat = {
+  dietType: "herbivore",
+  makeSound() {
+    console.log("baaa");
+  },
+  diet: () => {
+    console.log(this.dietType);
+  },
+};
+
+goat.diet(); // Prints undefined --> this is because an arrow function is tied to the global scope "dietType" which is undefined\
+//Basically, don't do this
+
+//*----> Example
+
+//?Currently the .checkEnergy() method is not producing the correct output because it is using arrow function syntax.
+//?Refactor, or change, the method to use a function expression
+/*
+const robot = {
+  energyLevel: 100,
+  checkEnergy: () => {
+    console.log(`Energy is currently at ${this.energyLevel}%.`);
+  },
+};
+
+robot.checkEnergy();
+*/
+//!Change
+
+const robot = {
+  energyLevel: 100,
+  checkEnergy() {
+    console.log(`Energy is currently at ${this.energyLevel}%.`);
+  },
+};
+
+robot.checkEnergy();
