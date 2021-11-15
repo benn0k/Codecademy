@@ -205,4 +205,9 @@ const robot = {
   },
 };
 
-robot.checkEnergy();
+//* Privacy
+//? JS doesn't have built in "privacy" for objects, so we use a forward slash instead
+const bankAccount = {
+  _amount: 1000,
+};
+//* --> Example
