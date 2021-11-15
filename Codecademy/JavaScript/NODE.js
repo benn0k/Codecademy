@@ -1,16 +1,49 @@
 let spaceship = {
-  "Fuel Type": "Turbo Fuel",
-  homePlanet: "Earth",
+  crew: {
+    captain: {
+      name: "Lily",
+      degree: "Computer Engineering",
+      cheerTeam() {
+        console.log("You got this!");
+      },
+    },
+    "chief officer": {
+      name: "Dan",
+      degree: "Aerospace Engineering",
+      agree() {
+        console.log("I agree, captain!");
+      },
+    },
+    medic: {
+      name: "Clementine",
+      degree: "Physics",
+      announce() {
+        console.log(`Jets on!`);
+      },
+    },
+    translator: {
+      name: "Shauna",
+      degree: "Conservation Science",
+      powerFuel() {
+        console.log("The tank is full!");
+      },
+    },
+  },
 };
 
-// Write your code below
+//?Using for...in, iterate through the spaceship.crew object in the code editor and console.log() a list of crew roles and names in the following format
 
-//?Write a function greenEnergy() that has an object as a parameter and sets that object’s 'Fuel Type' property to 'avocado oil'.
+// for...in
+/*
 
-let greenEnergy = (obj) => {
-  obj["Fuel Type"] = "Avocado Oil";
-};
+for (let crewMember in spaceship.crew) {
+  console.log(`${crewMember}: ${spaceship.crew[crewMember].name}`);
+}
+*/
+//? Second for in loop
 
-greenEnergy(spaceship);
-
-console.log(spaceship["Fuel Type"]);
+for (let crewMember in spaceship.crew) {
+  console.log(
+    `${spaceship.crew[crewMember].name}: ${spaceship.crew[crewMember].degree}`
+  );
+}
