@@ -98,4 +98,18 @@ let spaceship = {
 
 // Write your code below
 
-//?Write a function greenEnergy() that has an object as a parameter and sets that object’s 'Fuel Type' property to 'avocado oil'.
+let greenEnergy = (obj) => {
+  obj["Fuel Type"] = "avocado oil";
+};
+greenEnergy(spaceship);
+
+console.log(spaceship["Fuel Type"]);
+
+//? Write a function remotelyDisable() that has an object as a parameter and sets (or reassigns) that object’s disabled property to true.
+
+let remotelyDisable = (obj) => {
+  obj.disabled = true;
+};
+
+remotelyDisable(spaceship);
+console.log(spaceship);
