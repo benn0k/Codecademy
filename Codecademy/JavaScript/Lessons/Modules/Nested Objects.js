@@ -211,3 +211,55 @@ const bankAccount = {
   _amount: 1000,
 };
 //* --> Example
+const robot = {
+  _energyLevel: 100,
+  recharge() {
+    this._energyLevel += 30;
+    console.log(`Recharged! Energy is currently at ${this._energyLevel}%.`);
+  },
+};
+
+//?Below the robot object, reassign the _energyLevel property to 'high'.
+
+robot._energyLevel = "high";
+
+//? Now take a look at the new recharge method in robot. .recharge() will add 30 to _energyLevel.
+//?What will happen now that _energyLevel isn’t a number?
+
+robot.recharge();
+
+//* Getters
+//Getters are methods that get and return the internal properties of an object.
+
+const person = {
+  _firstName: "John",
+  _lastName: "Doe",
+  get fullName() {
+    if (this._firstName && this._lastName) {
+      return `${this._firstName} ${this._lastName}`;
+    } else {
+      return "Missing a first name or a last name.";
+    }
+  },
+};
+
+// To call the getter method:
+person.fullName; // 'John Doe'
+
+//* Example -->
+//?In robot, create a getter method named energyLevel using the get keyword. Leave function body blank for now.
+
+//?Inside the getter method, add an if statement to check if this._energyLevel is a number
+const robot = {
+  _model: "1E78V2",
+  _energyLevel: 100,
+  get energyLevel() {
+    if (typeof this._energyLevel === "number") {
+      return `My current energy level is ${this._energyLevel}`;
+    } else {
+      return `System malfunction: cannot retrieve energy level`;
+    }
+  },
+};
+//getter method, doesn't need to be invoked with a ()
+console.log(robot.energyLevel);
