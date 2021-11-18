@@ -1,20 +1,19 @@
 //?Currently, in robot there is a getter method for numOfSensors but no setter method
 //?Add a setter method named numOfSensors using the set keyword. Provide a parameter of num.
-const number = "number";
 
 const robot = {
   _model: "1E78V2",
   _energyLevel: 100,
   _numOfSensors: 15,
   get numOfSensors() {
-    if (typeof this._numOfSensors === number) {
+    if (typeof this._numOfSensors === "number") {
       return this._numOfSensors;
     } else {
       return "Sensors are currently down.";
     }
   },
   set numOfSensors(num) {
-    if (typeof num === number && num >= 0) {
+    if (typeof num === "number" && num >= 0) {
       this._numOfSensors = num;
       console.log("we in here");
     } else {
