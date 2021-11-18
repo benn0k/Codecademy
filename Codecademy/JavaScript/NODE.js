@@ -1,16 +1,28 @@
-//?In robot, create a getter method named energyLevel using the get keyword. Leave function body blank for now.
+//?Currently, in robot there is a getter method for numOfSensors but no setter method
+//?Add a setter method named numOfSensors using the set keyword. Provide a parameter of num.
+const number = "number";
 
-//?Inside the getter method, add an if statement to check if this._energyLevel is a number
 const robot = {
   _model: "1E78V2",
   _energyLevel: 100,
-  get energyLevel() {
-    if (typeof this._energyLevel === "number") {
-      return `My current energy level is ${this._energyLevel}`;
+  _numOfSensors: 15,
+  get numOfSensors() {
+    if (typeof this._numOfSensors === number) {
+      return this._numOfSensors;
     } else {
-      return `System malfunction: cannot retrieve energy level`;
+      return "Sensors are currently down.";
+    }
+  },
+  set numOfSensors(num) {
+    if (typeof num === number && num >= 0) {
+      this._numOfSensors = num;
+      console.log("we in here");
+    } else {
+      console.log("Pass in a number that is greater than or equal to 0");
     }
   },
 };
-//getter method, doesn't need to be invoked with a ()
-console.log(robot.energyLevel);
+
+robot.numOfSensors = 100;
+
+console.log(robot.numOfSensors);
