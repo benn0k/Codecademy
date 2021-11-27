@@ -15,7 +15,7 @@ const menu = {
   get desserts() {},
   set desserts(dessertsIn) {},
   //creates getter for _courses
-  get _courses() {
+  get courses() {
     //return apps, mains, desserts
     return {
       appetizers: this.appetizers,
@@ -27,11 +27,10 @@ const menu = {
   addDishToCourse(courseName, dishName, coursePrice) {
     //create object dish that includes name and price
     const dish = {
-      name: courseName,
-      dish: dishName,
+      name: dishName,
       price: coursePrice,
     };
-    //push object to
+    //push object to array
     this._courses[courseName].push(dish);
   },
   //create function to get random Dish
@@ -43,19 +42,20 @@ const menu = {
   },
   //create function to generate random meal
   generateRandomMeal: function () {
-    const appetizer = this.getRandomDishFromCourse("appetizers");
+    const appetizers = this.getRandomDishFromCourse("appetizers");
     const mains = this.getRandomDishFromCourse("mains");
     const desserts = this.getRandomDishFromCourse("desserts");
-    const totalPrice = appetizer.price + mains.price + desserts.price;
 
-    return `Your meal is ${appetizer.name}, ${mains.name}, ${desserts.name}. The price is $${totalPrice},`;
+    const totalPrice = appetizers.price + mains.price + desserts.price;
+    return `Your meal is ${appetizers.name}, ${mains.name}, ${desserts.name}. The price is $${totalPrice},`;
   },
 };
 //Add dishes to course
 menu.addDishToCourse("appetizers", "Caesar Salad", 4.0);
 menu.addDishToCourse("mains", "Steak", 4);
-menu.addDishToCourse("dessert", "Cake", 4);
+menu.addDishToCourse("desserts", "Cake", 4);
 //debug and check
+
 let meal = menu.generateRandomMeal();
 
 console.log(meal);
