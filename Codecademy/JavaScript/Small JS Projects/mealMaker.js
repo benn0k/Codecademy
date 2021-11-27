@@ -39,6 +39,8 @@ const menu = {
     const dishes = this._courses[courseName];
     // return a dish from dishes using random index
     const randomIndex = Math.floor(Math.random() * dishes.length);
+    //return dishes
+    return dishes[randomIndex];
   },
   //create function to generate random meal
   generateRandomMeal: function () {
