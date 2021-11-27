@@ -5,7 +5,7 @@ const menu = {
     mains: [],
     desserts: [],
   },
-  // create getters and setters for each property
+  //create getters and setters for each property
   get appetizers() {},
   set appetizers(appetizerIn) {},
 
@@ -14,7 +14,7 @@ const menu = {
 
   get desserts() {},
   set desserts(dessertsIn) {},
-  //creates getter for _courses
+  //create getter for _courses
   get courses() {
     //return apps, mains, desserts
     return {
@@ -23,6 +23,7 @@ const menu = {
       desserts: this.desserts,
     };
   },
+
   //create method to add dish. Takes in name, price
   addDishToCourse(courseName, dishName, coursePrice) {
     //create object dish that includes name and price
@@ -40,6 +41,7 @@ const menu = {
     // return a dish from dishes using random index
     const randomIndex = Math.floor(Math.random() * dishes.length);
     //return dishes
+    console.log(randomIndex);
     return dishes[randomIndex];
   },
   //create function to generate random meal
@@ -56,8 +58,9 @@ const menu = {
 menu.addDishToCourse("appetizers", "Caesar Salad", 4.0);
 menu.addDishToCourse("mains", "Steak", 4);
 menu.addDishToCourse("desserts", "Cake", 4);
+menu.addDishToCourse("appetizers", "Fried Green Beans", 8.0);
 //debug and check
-
+console.log(menu._courses);
 let meal = menu.generateRandomMeal();
 
 console.log(meal);
