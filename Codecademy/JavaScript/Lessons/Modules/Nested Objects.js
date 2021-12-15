@@ -10,7 +10,7 @@ const spaceship = {
     focalLength: 2032,
   },
   crew: {
-    //spacesip crew captian sandra, who has a degree in computer engineering
+    //spaceship crew captian sandra, who has a degree in computer engineering
     captain: {
       name: "Sandra",
       degree: "Computer Engineering",
