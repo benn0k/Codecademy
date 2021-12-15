@@ -6,63 +6,63 @@ const spaceship = {
   telescope: {
     //data of telescope of spaceship
     yearBuilt: 2018,
-    model: "91031-XLT",
+    model: '91031-XLT',
     focalLength: 2032,
   },
   crew: {
     //spaceship crew captian sandra, who has a degree in computer engineering
     captain: {
-      name: "Sandra",
-      degree: "Computer Engineering",
+      name: 'Sandra',
+      degree: 'Computer Engineering',
       encourageTeam() {
-        console.log("We got this!");
+        console.log('We got this!');
       },
     },
   },
   engine: {
-    model: "Nimbus2000",
+    model: 'Nimbus2000',
   },
   nanoelectronics: {
     computer: {
       terabytes: 100,
-      monitors: "HD",
+      monitors: 'HD',
     },
-    "back-up": {
-      battery: "Lithium",
+    'back-up': {
+      battery: 'Lithium',
       terabytes: 50,
     },
   },
 };
-spaceship.nanoelectronics["back-up"].battery; // Returns 'Lithium'
+spaceship.nanoelectronics['back-up'].battery; // Returns 'Lithium'
 spaceship.crew.captain.encourageTeam(); // "We got this!" expected
 //*Example--->
 let spaceship = {
   passengers: null,
   telescope: {
     yearBuilt: 2018,
-    model: "91031-XLT",
+    model: '91031-XLT',
     focalLength: 2032,
   },
   crew: {
     captain: {
-      name: "Sandra",
-      degree: "Computer Engineering",
+      name: 'Sandra',
+      degree: 'Computer Engineering',
       encourageTeam() {
-        console.log("We got this!");
+        console.log('We got this!');
       },
-      "Favorite Foods": ["cookies", "cakes", "candy", "spinach"],
+      'Favorite Foods': ['cookies', 'cakes', 'candy', 'spinach'],
     },
   },
   engine: {
-    model: "Nimbus2000",
+    model: 'Nimbus2000',
   },
   nanoelectronics: {
     computer: {
       terabytes: 100,
-      monitors: "HD",
+      monitors: 'HD',
     },
-    "back-up": {
-      battery: "Lithium",
+    'back-up': {
+      battery: 'Lithium',
       terabytes: 50,
     },
   },
@@ -70,13 +70,13 @@ let spaceship = {
 
 //? Create a variable capFave and assign the captain‘s favorite food
 
-let capFave = spaceship.crew.captain["Favorite Foods"][0];
+let capFave = spaceship.crew.captain['Favorite Foods'][0];
 //console.log(capFave);
 
 //? Right now the passengers property has a value of null. Instead, assign as its value an array of objects.
 
 //this will nest an object in Passengers known as "names" with the array
-spaceship.passengers = { names: ["Ryan", "Brady", "Jon"] };
+spaceship.passengers = { names: ['Ryan', 'Brady', 'Jon'] };
 
 //console.log(passengers);
 //?Create a variable firstPassenger and assign the first passenger as its value (the element in the 0th index of the spaceship.passengers array you just made).
@@ -92,17 +92,17 @@ console.log(firstPassenger);
 //*---> Example
 
 let spaceship = {
-  "Fuel Type": "Turbo Fuel",
-  homePlanet: "Earth",
+  'Fuel Type': 'Turbo Fuel',
+  homePlanet: 'Earth',
 };
 // Write your code below
 
 let greenEnergy = (obj) => {
-  obj["Fuel Type"] = "avocado oil";
+  obj['Fuel Type'] = 'avocado oil';
 };
 greenEnergy(spaceship);
 
-console.log(spaceship["Fuel Type"]);
+console.log(spaceship['Fuel Type']);
 
 //? Write a function remotelyDisable() that has an object as a parameter and sets (or reassigns) that object’s disabled property to true.
 
@@ -120,31 +120,31 @@ console.log(spaceship);
 let spaceship = {
   crew: {
     captain: {
-      name: "Lily",
-      degree: "Computer Engineering",
+      name: 'Lily',
+      degree: 'Computer Engineering',
       cheerTeam() {
-        console.log("You got this!");
+        console.log('You got this!');
       },
     },
-    "chief officer": {
-      name: "Dan",
-      degree: "Aerospace Engineering",
+    'chief officer': {
+      name: 'Dan',
+      degree: 'Aerospace Engineering',
       agree() {
-        console.log("I agree, captain!");
+        console.log('I agree, captain!');
       },
     },
     medic: {
-      name: "Clementine",
-      degree: "Physics",
+      name: 'Clementine',
+      degree: 'Physics',
       announce() {
         console.log(`Jets on!`);
       },
     },
     translator: {
-      name: "Shauna",
-      degree: "Conservation Science",
+      name: 'Shauna',
+      degree: 'Conservation Science',
       powerFuel() {
-        console.log("The tank is full!");
+        console.log('The tank is full!');
       },
     },
   },
@@ -170,9 +170,9 @@ for (let crewMember in spaceship.crew) {
 //* Arrow Function and this
 
 const goat = {
-  dietType: "herbivore",
+  dietType: 'herbivore',
   makeSound() {
-    console.log("baaa");
+    console.log('baaa');
   },
   diet: () => {
     console.log(this.dietType);
@@ -221,7 +221,7 @@ const robot = {
 
 //?Below the robot object, reassign the _energyLevel property to 'high'.
 
-robot._energyLevel = "high";
+robot._energyLevel = 'high';
 
 //? Now take a look at the new recharge method in robot. .recharge() will add 30 to _energyLevel.
 //?What will happen now that _energyLevel isn’t a number?
@@ -232,13 +232,13 @@ robot.recharge();
 //Getters are methods that get and return the internal properties of an object.
 
 const person = {
-  _firstName: "John",
-  _lastName: "Doe",
+  _firstName: 'John',
+  _lastName: 'Doe',
   get fullName() {
     if (this._firstName && this._lastName) {
       return `${this._firstName} ${this._lastName}`;
     } else {
-      return "Missing a first name or a last name.";
+      return 'Missing a first name or a last name.';
     }
   },
 };
@@ -251,10 +251,10 @@ person.fullName; // 'John Doe'
 
 //?Inside the getter method, add an if statement to check if this._energyLevel is a number
 const robot = {
-  _model: "1E78V2",
+  _model: '1E78V2',
   _energyLevel: 100,
   get energyLevel() {
-    if (typeof this._energyLevel === "number") {
+    if (typeof this._energyLevel === 'number') {
       return `My current energy level is ${this._energyLevel}`;
     } else {
       return `System malfunction: cannot retrieve energy level`;
