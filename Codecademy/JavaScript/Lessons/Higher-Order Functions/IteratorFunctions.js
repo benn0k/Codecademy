@@ -61,3 +61,36 @@ const bigNumbers = [100, 200, 300, 400, 500];
 const smallNumbers = bigNumbers.map((number) => number / 100);
 
 console.log(smallNumbers);
+
+//! .findIndex () will find the location of an element in an array.
+//numbers
+const jumbledNums = [123, 25, 78, 5, 9];
+// new variable that stores returned index from invoking .findIndex
+//each element in the jumbledNums array will be passed to this function as an element
+
+const lessThanTen = jumbledNums.findIndex((num) => {
+  //when num is less than 10
+  return num < 10;
+});
+
+console.log(lessThanTen); // Output: 3
+console.log(jumbledNums[3]); // Output: 5
+
+const animals = [
+  'hippo',
+  'tiger',
+  'lion',
+  'seal',
+  'cheetah',
+  'monkey',
+  'salamander',
+  'elephant',
+];
+
+const foundAnimal = animals.findIndex((animal) => {
+  return animal === 'elephant';
+});
+
+const startsWithS = animals.findIndex((animal) => {
+  return animal[0] === 's';
+});
