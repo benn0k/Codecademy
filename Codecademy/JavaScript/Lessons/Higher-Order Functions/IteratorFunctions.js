@@ -94,3 +94,45 @@ const foundAnimal = animals.findIndex((animal) => {
 const startsWithS = animals.findIndex((animal) => {
   return animal[0] === 's';
 });
+
+//! .reduce() method returns a single value after iterating through the elements of an array// this will, in turn reduce the array
+
+const numbers = [1, 2, 4, 10];
+// summed nums is equal to the return value of the callback function
+//callback function takes in to parameters. accuimulator starts as the first element in the array
+//current value starts as the second
+const summedNums = numbers.reduce((accumulator, currentValue) => {
+  return accumulator + currentValue;
+}, 100); //setting a second parameter here will start current value at whatever integer you add here
+
+console.log(summedNums); // Output: 117
+
+const newNumbers = [1, 3, 5, 7];
+
+const newSum = newNumbers.reduce((accumulator, currentValue) => {
+  console.log('The value of accumulator:' + accumulator);
+  console.log('The value of currentValue:' + currentValue);
+  return accumulator + currentValue;
+}, 100);
+
+console.log(newSum);
+
+//! .some() method test whether at least one element in the array passes the test implemented by the function
+
+const words = ['unique', 'uncanny', 'pique', 'oxymoron', 'guise'];
+
+console.log(
+  words.some((word) => {
+    return word.length < 6;
+  })
+);
+
+const interestingWords = words.filter((word) => {
+  return word.length > 5;
+});
+
+console.log(
+  interestingWords.every((word) => {
+    return word.length() > 5;
+  })
+);
