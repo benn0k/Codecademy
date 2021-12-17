@@ -60,4 +60,61 @@ const bigNumbers = [100, 200, 300, 400, 500];
 
 const smallNumbers = bigNumbers.map((number) => number / 100);
 
-console.log(smallNumbers);
+console.log(smallNumbers); // Returns 10, 20, 30, 40, 50
+
+//! .filter() returns a array of elements after filtering out elements from an array
+
+const words = ['chair', 'music', 'pillow', 'brick', 'pen', 'door'];
+// words.filter takes in 'words' elements, anything less than 6 is returned to shortwords
+const shortWords = words.filter((word) => {
+  return word.length < 6;
+});
+
+const randomNumbers = [375, 200, 3.14, 7, 13, 852];
+
+// Call .filter() on randomNumbers below
+
+const smallNumbers = randomNumbers.filter((number) => {
+  return number < 250;
+});
+
+const favoriteWords = [
+  'nostalgia',
+  'hyperbole',
+  'fervent',
+  'esoteric',
+  'serene',
+];
+// filter favoriteWords array so that only words greater than 7 are returned
+const longFavoriteWords = favoriteWords.filter((word) => {
+  return word.length > 7;
+});
+
+//! findIndex() will return the location of an element in an array that evaluates to true
+
+const jumbledNums = [123, 25, 78, 5, 9];
+
+const lessThanTen = jumbledNums.findIndex((num) => {
+  return num < 10;
+});
+
+const animals = [
+  'hippo',
+  'tiger',
+  'lion',
+  'seal',
+  'cheetah',
+  'monkey',
+  'salamander',
+  'elephant',
+];
+
+const foundAnimal = animals.findIndex((animal) => {
+  return animal === 'elephant';
+});
+
+const startsWithS = animals.findIndex((animal) => {
+  if animal.charAt) === 's' {
+    return animal;
+  }
+})
