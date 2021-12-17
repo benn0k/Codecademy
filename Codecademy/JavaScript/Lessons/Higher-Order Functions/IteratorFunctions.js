@@ -60,43 +60,21 @@ const bigNumbers = [100, 200, 300, 400, 500];
 
 const smallNumbers = bigNumbers.map((number) => number / 100);
 
-console.log(smallNumbers); // Returns 10, 20, 30, 40, 50
+console.log(smallNumbers);
 
-//! .filter() returns a array of elements after filtering out elements from an array
-
-const words = ['chair', 'music', 'pillow', 'brick', 'pen', 'door'];
-// words.filter takes in 'words' elements, anything less than 6 is returned to shortwords
-const shortWords = words.filter((word) => {
-  return word.length < 6;
-});
-
-const randomNumbers = [375, 200, 3.14, 7, 13, 852];
-
-// Call .filter() on randomNumbers below
-
-const smallNumbers = randomNumbers.filter((number) => {
-  return number < 250;
-});
-
-const favoriteWords = [
-  'nostalgia',
-  'hyperbole',
-  'fervent',
-  'esoteric',
-  'serene',
-];
-// filter favoriteWords array so that only words greater than 7 are returned
-const longFavoriteWords = favoriteWords.filter((word) => {
-  return word.length > 7;
-});
-
-//! findIndex() will return the location of an element in an array that evaluates to true
-
+//! .findIndex () will find the location of an element in an array.
+//numbers
 const jumbledNums = [123, 25, 78, 5, 9];
+// new variable that stores returned index from invoking .findIndex
+//each element in the jumbledNums array will be passed to this function as an element
 
 const lessThanTen = jumbledNums.findIndex((num) => {
+  //when num is less than 10
   return num < 10;
 });
+
+console.log(lessThanTen); // Output: 3
+console.log(jumbledNums[3]); // Output: 5
 
 const animals = [
   'hippo',
@@ -114,7 +92,82 @@ const foundAnimal = animals.findIndex((animal) => {
 });
 
 const startsWithS = animals.findIndex((animal) => {
-  if animal.charAt) === 's' {
-    return animal;
-  }
-})
+  return animal[0] === 's';
+});
+
+//! .reduce() method returns a single value after iterating through the elements of an array// this will, in turn reduce the array
+
+const numbers = [1, 2, 4, 10];
+// summed nums is equal to the return value of the callback function
+//callback function takes in to parameters. accuimulator starts as the first element in the array
+//current value starts as the second
+const summedNums = numbers.reduce((accumulator, currentValue) => {
+  return accumulator + currentValue;
+}, 100); //setting a second parameter here will start current value at whatever integer you add here
+
+console.log(summedNums); // Output: 117
+
+const newNumbers = [1, 3, 5, 7];
+
+const newSum = newNumbers.reduce((accumulator, currentValue) => {
+  console.log('The value of accumulator:' + accumulator);
+  console.log('The value of currentValue:' + currentValue);
+  return accumulator + currentValue;
+}, 100);
+
+console.log(newSum);
+
+//! .some() method test whether at least one element in the array passes the test implemented by the function
+
+const words = ['unique', 'uncanny', 'pique', 'oxymoron', 'guise'];
+
+console.log(
+  words.some((word) => {
+    return word.length < 6;
+  })
+);
+
+const interestingWords = words.filter((word) => {
+  return word.length > 5;
+});
+
+console.log(
+  interestingWords.every((word) => {
+    return word.length() > 5;
+  })
+);
+
+//? Recap
+
+const cities = [
+  'Orlando',
+  'Dubai',
+  'Edinburgh',
+  'Chennai',
+  'Accra',
+  'Denver',
+  'Eskisehir',
+  'Medellin',
+  'Yokohama',
+];
+
+const nums = [1, 50, 75, 200, 350, 525, 1000];
+
+//  Choose a method that will return undefined
+cities.forEach((city) => console.log('Have you visited ' + city + '?'));
+
+// Choose a method that will return a new array
+const longCities = cities.filter((city) => city.length > 7);
+
+// Choose a method that will return a single value
+const word = cities.reduce((acc, currVal) => {
+  return acc + currVal[0];
+}, 'C');
+
+console.log(word);
+
+// Choose a method that will return a new array
+const smallerNums = nums.map((num) => num - 5);
+
+// Choose a method that will return a boolean value
+nums.some((num) => num < 0);

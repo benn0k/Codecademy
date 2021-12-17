@@ -1,19 +1,17 @@
-const animals = [
-  'Hen',
-  'elephant',
-  'llama',
-  'leopard',
-  'ostrich',
-  'Whale',
-  'octopus',
-  'rabbit',
-  'lion',
-  'dog',
-].map(function (animals) {
-  secretMessage = animals[0];
-  return secretMessage;
+const words = ['unique', 'uncanny', 'pique', 'oxymoron', 'guise'];
+
+console.log(
+  words.some((word) => {
+    return word.length < 6;
+  })
+);
+
+const interestingWords = words.filter((word) => {
+  return word.length > 5;
 });
 
-// Create the secretMessage array below
-
-console.log(secretMessage.join(''));
+console.log(
+  interestingWords.every((word) => {
+    return word.length > 5;
+  })
+);
