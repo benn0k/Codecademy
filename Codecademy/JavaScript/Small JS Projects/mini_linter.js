@@ -6,6 +6,7 @@ let unnecessaryWords = ["extremely", "literally", "actually"];
 
 //* split string and assign to new array called storyWords
 const storyWords = story.split(" ");
+const storyLetters = story.split("");
 
 //console.log(storyWords);
 
@@ -17,3 +18,35 @@ const betterWords = storyWords.filter(
 );
 
 //console.log(betterWords);
+//* create overusedwordcount counter
+let overusedWordsCount = 0;
+// for each word in betterWords
+for (word of betterWords) {
+  //if word is equal to overusedWords[0], increment overused word count. Else if for each other word
+  if (word === overusedWords[0]) {
+    overusedWordsCount++;
+  } else if (word === overusedWords[1]) {
+    overusedWordsCount++;
+  } else if (word === overusedWords[2]) {
+    overusedWordsCount++;
+  }
+}
+
+//* Create a sentenceCount variable, set to zero. Idea here is to increment the counter when we see a '.' or '!'
+let sentenceCount = 0;
+//for each letter of storyLetters
+storyLetters.forEach((letter) => {
+  //if letter = !, increment count
+  if (letter === "!") {
+    sentenceCount++;
+  } else if (letter === ".") {
+    sentenceCount++;
+  }
+});
+
+//* Log Word Count, Overused Word Count, and sentence count
+console.log(`Current word count: ` + storyWords.length);
+console.log(`You have used overused words ${overusedWordsCount} times.`);
+console.log(`Current sentence count: ${sentenceCount}`);
+
+//const overusedWordsCount = storyWords.forEach((word) => {});
