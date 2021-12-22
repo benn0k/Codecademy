@@ -6,11 +6,12 @@ let unnecessaryWords = ["extremely", "literally", "actually"];
 
 //* split string and assign to new array called storyWords
 const storyWords = story.split(" ");
+//* Do the same, but for each letter
 const storyLetters = story.split("");
 
 //console.log(storyWords);
 
-//*create better Words array, filter out using iterator function
+//*create better Words array, filter storyWords using iterator function
 const betterWords = storyWords.filter(
   (word) =>
     //* return word only if it's not included in unnecessaryWords
@@ -18,28 +19,23 @@ const betterWords = storyWords.filter(
 );
 
 //console.log(betterWords);
+
 //* create overusedwordcount counter
 let overusedWordsCount = 0;
 // for each word in betterWords
 for (word of betterWords) {
-  //if word is equal to overusedWords[0], increment overused word count. Else if for each other word
-  if (word === overusedWords[0]) {
-    overusedWordsCount++;
-  } else if (word === overusedWords[1]) {
-    overusedWordsCount++;
-  } else if (word === overusedWords[2]) {
+  //if overusedWords is included in word, increment overused word count.
+  if (overusedWords.includes(word)) {
     overusedWordsCount++;
   }
 }
 
-//* Create a sentenceCount variable, set to zero. Idea here is to increment the counter when we see a '.' or '!'
+//* Create a sentenceCount counter, set to zero. Idea here is to increment the counter when we see a '.' or '!'
 let sentenceCount = 0;
 //for each letter of storyLetters
 storyLetters.forEach((letter) => {
-  //if letter = !, increment count
-  if (letter === "!") {
-    sentenceCount++;
-  } else if (letter === ".") {
+  //if letter = ! or . increment count
+  if (letter === "!" || letter === ".") {
     sentenceCount++;
   }
 });
