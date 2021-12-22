@@ -5,8 +5,15 @@ let overusedWords = ["really", "very", "basically"];
 let unnecessaryWords = ["extremely", "literally", "actually"];
 
 //* split string and assign to new array called storyWords
-const storyWords = story.split("");
+const storyWords = story.split(" ");
 
-//debug console.log(storyWords);
+//console.log(storyWords);
 
-//*
+//*create better Words array, filter out using iterator function
+const betterWords = storyWords.filter(
+  (word) =>
+    //* return word only if it's not included in unnecessaryWords
+    !unnecessaryWords.includes(word)
+);
+
+//console.log(betterWords);
