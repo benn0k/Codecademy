@@ -49,4 +49,5 @@ console.log(`Current word count: ` + storyWords.length);
 console.log(`You have used overused words ${overusedWordsCount} times.`);
 console.log(`Current sentence count: ${sentenceCount}`);
 
-//const overusedWordsCount = storyWords.forEach((word) => {});
+//* Join storyWords
+console.log(betterWords.join(" "));
