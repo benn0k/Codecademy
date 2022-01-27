@@ -1,15 +1,17 @@
-//* Write a function, convertToBaby(), that takes in an array as an argument and, using a loop, returns a new array with each string in the array prepended with 'baby '.
+//* Write a function shoutGreetings() that takes in an array of strings and returns a new array. This new array should contain all the strings from the argument array but with capitalized letters and an exclamation point appended to the end
 
 // Write your code here:
-const convertToBaby = (animals) => {
-  babyAnimals = [];
-  for (i = 0; i < animals.length; i++) {
-    babyAnimals[i] = 'baby ' + animals[i];
-  }
-  return babyAnimals;
+
+const shoutGreetings = (arr) => {
+  mutatedGreeting = [];
+  arr.forEach((greetings) => {
+    mutatedGreeting.push(greetings.toUpperCase() + `!`);
+  });
+  return mutatedGreeting;
 };
-// When you're ready to test your code, uncomment the below and run:
 
-const animals = ['panda', 'turtle', 'giraffe', 'hippo', 'sloth', 'human'];
+// Feel free to uncomment out the code below to test your function!
+const greetings = ['hello', 'hi', 'heya', 'oi', 'hey', 'yo'];
 
-console.log(convertToBaby(animals));
+console.log(shoutGreetings(greetings));
+// Should print [ 'HELLO!', 'HI!', 'HEYA!', 'OI!', 'HEY!', 'YO!' ]
