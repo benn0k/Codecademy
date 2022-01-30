@@ -1,17 +1,20 @@
-//* Write a function shoutGreetings() that takes in an array of strings and returns a new array. This new array should contain all the strings from the argument array but with capitalized letters and an exclamation point appended to the end
+const speciesArray = [
+  { speciesName: 'shark', numTeeth: 50 },
+  { speciesName: 'dog', numTeeth: 42 },
+  { speciesName: 'alligator', numTeeth: 80 },
+  { speciesName: 'human', numTeeth: 32 },
+];
 
 // Write your code here:
 
-const shoutGreetings = (arr) => {
-  mutatedGreeting = [];
-  arr.forEach((greetings) => {
-    mutatedGreeting.push(greetings.toUpperCase() + `!`);
-  });
-  return mutatedGreeting;
-};
+// Feel free to comment out the code below when you're ready to test your function!
+/*
+console.log(sortSpeciesByTeeth(speciesArray))
 
-// Feel free to uncomment out the code below to test your function!
-const greetings = ['hello', 'hi', 'heya', 'oi', 'hey', 'yo'];
+// Should print:
+// [ { speciesName: 'human', numTeeth: 32 },
+//   { speciesName: 'dog', numTeeth: 42 },
+//   { speciesName: 'shark', numTeeth: 50 },
+//   { speciesName: 'alligator', numTeeth: 80 } ]
 
-console.log(shoutGreetings(greetings));
-// Should print [ 'HELLO!', 'HI!', 'HEYA!', 'OI!', 'HEY!', 'YO!' ]
+*/
