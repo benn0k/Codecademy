@@ -35,17 +35,7 @@ const aliens = ["Blorgous", "Glamyx", "Wegord", "SpaceKing"];
 
 greetAliens(aliens);
 
-//* Write a function, convertToBaby(), that takes in an array as an argument and, using a loop, returns a new array with each string in the array prepended with 'baby '.
-
-// Write your code here:
-const convertToBaby = (animalsArr) => {
-  babyAnimals = [];
-  for (i = 0; i < animalsArr.length; i++) {
-    babyAnimals[i] = "baby " + animals[i];
-  }
-  return babyAnimals;
-};
-// When you're ready to test your code, uncomment the below and run:
+//* Write a function, convertToBaby(), that takes in an array as an argument and, using a loop, returns a new array with each string in the array prepended with 'baby '.// When you're ready to test your code, uncomment the below and run:
 
 const animals = ["panda", "turtle", "giraffe", "hippo", "sloth", "human"];
 
@@ -197,3 +187,85 @@ const dinner = [
 
 console.log(dinner.every(isTheDinnerVegan));
 // Should print false
+
+const speciesArray = [
+  { speciesName: "shark", numTeeth: 50 },
+  { speciesName: "dog", numTeeth: 42 },
+  { speciesName: "alligator", numTeeth: 80 },
+  { speciesName: "human", numTeeth: 32 },
+];
+
+// Write your code here:
+const sortSpeciesByTeeth = (arr) => {
+  arr.sort((a, b) => a.numTeeth - b.numTeeth);
+  return arr;
+};
+
+console.log(sortSpeciesByTeeth(speciesArray));
+
+// [ { speciesName: 'human', numTeeth: 32 },
+//   { speciesName: 'dog', numTeeth: 42 },
+//   { speciesName: 'shark', numTeeth: 50 },
+//   { speciesName: 'alligator', numTeeth: 80 } ]
+
+////console.log(sortSpeciesByTeeth(speciesArray));
+
+// [ { speciesName: 'human', numTeeth: 32 },
+//   { speciesName: 'dog', numTeeth: 42 },
+//   { speciesName: 'shark', numTeeth: 50 },
+//   { speciesName: 'alligator', numTeeth: 80 } ]
+
+const dogFactory = (name, breed, weight) => {
+  return {
+    _name: name,
+    _breed: breed,
+    _weight: weight,
+
+    get name() {
+      return this._name;
+    },
+
+    set name(newName) {
+      if (typeof newName === "string") {
+        this._name = newName;
+      } else {
+        console.error("You must assign a string to name");
+      }
+    },
+
+    get breed() {
+      return this._breed;
+    },
+
+    set breed(newBreed) {
+      if (typeof newBreed === "string") {
+        this._breed = newBreed;
+      } else {
+        console.error("You must assign a string to newBreed");
+      }
+    },
+
+    get weight() {
+      return this._weight;
+    },
+    set weight(newWeight) {
+      if (typeof newWeight === "number") {
+        this._weight = newWeight;
+      } else {
+        console.error("You must assign a number to newWeight");
+      }
+    },
+
+    bark() {
+      return "ruff! ruff!";
+    },
+
+    eatTooManyTreats() {
+      this._weight++;
+    },
+  };
+};
+
+let obj1 = dogFactory("Simon", "Puppy", 10);
+
+console.log(obj1);
