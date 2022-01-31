@@ -107,3 +107,93 @@ const squareNums = (num) => {
 };
 
 squareNums(numbers);
+
+//* Write a function shoutGreetings() that takes in an array of strings and returns a new array. This new array should contain all the strings from the argument array but with capitalized letters and an exclamation point appended to the end
+
+// Write your code here:
+
+const shoutGreetings = (arr) => {
+  mutatedGreeting = [];
+  arr.forEach((greetings) => {
+    mutatedGreeting.push(greetings.toUpperCase() + `!`);
+  });
+  return mutatedGreeting;
+};
+
+// Feel free to uncomment out the code below to test your function!
+const greetings = ["hello", "hi", "heya", "oi", "hey", "yo"];
+
+console.log(shoutGreetings(greetings));
+// Should print [ 'HELLO!', 'HI!', 'HEYA!', 'OI!', 'HEY!', 'YO!' ]
+s;
+
+// Write your code here:
+const sortYears = (arr) => {
+  arr.sort().reverse();
+  return arr;
+};
+// Feel free to uncomment the below code to test your function:
+
+const years = [1970, 1999, 1951, 1982, 1963, 2011, 2018, 1922];
+
+console.log(sortYears(years));
+
+// Should print [ 2018, 2011, 1999, 1982, 1970, 1963, 1951, 1922 ]
+// Write your code here:
+
+//declare new justCoolStuff, pass two variables
+const justCoolStuff = (arr1, arr2) => {
+  // result = filtering through arr1, if the current iteration is included in array two, log it to res
+  res = arr1.filter((item) => arr2.includes(item));
+  //return
+  return res;
+};
+
+// Feel free to uncomment the code below to test your function
+
+const coolStuff = [
+  "gameboys",
+  "skateboards",
+  "backwards hats",
+  "fruit-by-the-foot",
+  "pogs",
+  "my room",
+  "temporary tattoos",
+];
+
+const myStuff = [
+  "rules",
+  "fruit-by-the-foot",
+  "wedgies",
+  "sweaters",
+  "skateboards",
+  "family-night",
+  "my room",
+  "braces",
+  "the information superhighway",
+];
+
+console.log(justCoolStuff(myStuff, coolStuff));
+// Should print [ 'fruit-by-the-foot', 'skateboards', 'my room' ]
+
+// Write your code here:
+
+const isTheDinnerVegan = (food) => {
+  if (food.source === "plant") {
+    return true;
+  }
+  return false;
+};
+
+// Feel free to comment out the code below to test your function
+
+const dinner = [
+  { name: "hamburger", source: "meat" },
+  { name: "cheese", source: "dairy" },
+  { name: "ketchup", source: "plant" },
+  { name: "bun", source: "plant" },
+  { name: "dessert twinkies", source: "unknown" },
+];
+
+console.log(dinner.every(isTheDinnerVegan));
+// Should print false
