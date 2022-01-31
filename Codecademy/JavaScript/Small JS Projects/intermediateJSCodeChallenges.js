@@ -38,9 +38,9 @@ greetAliens(aliens);
 //* Write a function, convertToBaby(), that takes in an array as an argument and, using a loop, returns a new array with each string in the array prepended with 'baby '.
 
 // Write your code here:
-const convertToBaby = (animals) => {
+const convertToBaby = (animalsArr) => {
   babyAnimals = [];
-  for (i = 0; i < animals.length; i++) {
+  for (i = 0; i < animalsArr.length; i++) {
     babyAnimals[i] = "baby " + animals[i];
   }
   return babyAnimals;
