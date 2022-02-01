@@ -269,3 +269,46 @@ const dogFactory = (name, breed, weight) => {
 let obj1 = dogFactory("Simon", "Puppy", 10);
 
 console.log(obj1);
+
+const factorial = (num) => {
+  let answer = 1;
+  for (let i = 1; i < num; i++) {
+    answer *= i + 1;
+    console.log(answer);
+  }
+  console.log(answer);
+};
+
+factorial(1);
+
+const subLength = (string, char) => {
+  //Split string into array
+  let stringArr = string.split("");
+  let counter = 0;
+
+  // Iterates through array, counts number of char in array
+  stringArr.forEach((letter) => {
+    if (letter === char) {
+      counter++;
+    }
+  });
+
+  //if more than three of same letter, letterDiff = 0
+  if (counter !== 2) {
+    letterDiff = 0;
+    console.log(letterDiff);
+  } else {
+    // get pos of first index
+    let firstIndex = stringArr.indexOf(char);
+
+    // get pos of second index
+    let secondIndex = stringArr.indexOf(char, firstIndex + 1);
+
+    letterDiff = secondIndex - firstIndex + 1;
+
+    console.log(letterDiff);
+  }
+};
+
+subLength("Saturday", "a");
+//returns 6
