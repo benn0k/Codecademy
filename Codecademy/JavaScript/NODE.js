@@ -1,15 +1,17 @@
-let groceries = (arr) => {
-  let splitArray = arr.map((foodItem) => {
-    return foodItem.item;
-  });
-  if (splitArray.length <= 1) {
-    return splitArray[0];
-  } else {
-    const part2 = splitArray.pop();
-    const part1 = splitArray.join(', ');
-    return `${part1} and ${part2}`;
-  }
-  // prints Carrots, Hummus, Pesto and Rigatoni
+const _ = {
+  inRange(num, start, end) {
+    if (end === undefined) {
+      start = 0;
+    }
+    if (start > end) {
+      tempEnd = end;
+      start = end;
+      end = tempEnd;
+      console.log(start);
+      console.log(end);
+      console.log(num);
+    }
+  },
 };
 
-groceries([{ item: 'Lettuce' }]);
+inRange(1, 2, 3);
