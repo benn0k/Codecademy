@@ -1,17 +1,24 @@
-//* Write a function shoutGreetings() that takes in an array of strings and returns a new array. This new array should contain all the strings from the argument array but with capitalized letters and an exclamation point appended to the end
+
+
 
 // Write your code here:
 
-const shoutGreetings = (arr) => {
-  mutatedGreeting = [];
-  arr.forEach((greetings) => {
-    mutatedGreeting.push(greetings.toUpperCase() + `!`);
-  });
-  return mutatedGreeting;
-};
 
-// Feel free to uncomment out the code below to test your function!
-const greetings = ['hello', 'hi', 'heya', 'oi', 'hey', 'yo'];
 
-console.log(shoutGreetings(greetings));
-// Should print [ 'HELLO!', 'HI!', 'HEYA!', 'OI!', 'HEY!', 'YO!' ]
+const sortYears = (yearNum) => {
+  sortedYears = [];
+  sortedYears = yearNum.sort();
+  
+
+
+}
+
+
+
+// Feel free to uncomment the below code to test your function:
+
+const years = [1970, 1999, 1951, 1982, 1963, 2011, 2018, 1922]
+
+console.log(sortYears(years))
+// Should print [ 2018, 2011, 1999, 1982, 1970, 1963, 1951, 1922 ]
+
