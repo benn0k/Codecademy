@@ -1,0 +1,25 @@
+@media only screen and (max-width: 359px) {
+  .entry-content-wrap {
+    padding: unset !important;
+  }
+  div#inner-wrap {
+    background: white;
+  }
+}
+
+/* Mediavine Sidebar Adjustment  */
+@media only screen and (min-width: 1200px) {
+  #secondary {
+    .sidebar-main: 300px !important;
+  }
+}
+
+@media only screen and (min-width: 1200px) {
+  #primary {
+    max-width: calc(100% - 300px);
+  }
+
+  .sidebar-main {
+    min-width: 300px !important;
+  }
+}
