@@ -31,8 +31,25 @@ const _ = {
     isInRange = Boolean(start <= num && num <= end);
     return isInRange;
   },
+  //split a passed string into words
+  words(string) {
+    //we can just use the built in JS method split for this
+    return string.split(' ');
+  },
+  //add padding equal to
+  pad(str, len) {
+    if (len > str.length) {
+      let startPadding = Math.floor(str.length - (len % 2));
+      let endPadding = len - str.length - startPadding;
+      let paddedString = `${' '.repeat(startPadding)}${str}${' '.repeat(
+        endPadding
+      )}`;
+      return paddedString;
+    } else {
+      return str;
+    }
+  },
 };
 
 // Do not write or modify code below this line.
 module.exports = _;
-? O I ? T
