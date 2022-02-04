@@ -36,7 +36,7 @@ const _ = {
     //we can just use the built in JS method split for this
     return string.split(' ');
   },
-  //add padding equal to
+  //add padding equal to len
   pad(str, len) {
     if (len > str.length) {
       let startPadding = Math.floor(str.length - (len % 2));
@@ -47,6 +47,27 @@ const _ = {
       return paddedString;
     } else {
       return str;
+    }
+  },
+  has(obj, key) {
+    return obj[key] != undefined ? true : false;
+  },
+
+  invert(object) {
+    const invertedObject = {};
+    for (let key in object) {
+      originalValue = object[key];
+
+      invertedObject[originalValue] = key;
+    }
+    return invertedObject;
+  },
+
+  findKey(object, predicate) {
+    for (let key in object) {
+      if (predicate(object[key])) {
+        return key;
+      }
     }
   },
 };

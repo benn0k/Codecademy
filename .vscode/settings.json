@@ -16,7 +16,12 @@
     "activityBar.foreground": "#e7e7e7",
     "activityBar.inactiveForeground": "#e7e7e799",
     "titleBar.activeForeground": "#e7e7e7",
-    "titleBar.inactiveForeground": "#e7e7e799"
+    "titleBar.inactiveForeground": "#e7e7e799",
+    "editorGroup.border": "#35324d",
+    "panel.border": "#35324d",
+    "statusBar.debuggingBackground": "#2c2e1e",
+    "statusBar.debuggingForeground": "#e7e7e7",
+    "tab.activeBorder": "#35324d"
   },
   "peacock.color": "#201e2e",
   "cSpell.ignoreWords": ["baaa"],
