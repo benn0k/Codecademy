@@ -70,6 +70,18 @@ const _ = {
       }
     }
   },
+
+  drop(arr, num = 1) {
+    droppedArr = arr.slice(num);
+    return droppedArr;
+  },
+
+  dropWhile(array, predicate) {
+    while (predicate(array[0], 0, array)) {
+      array.shift();
+    }
+    return array;
+  },
 };
 
 // Do not write or modify code below this line.
